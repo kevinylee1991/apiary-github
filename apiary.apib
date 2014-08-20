@@ -45,3 +45,36 @@ A single Note object with all its details
 
 ### Remove a Note [DELETE]
 + Response 204
+
+## Data stuff [/data]
+### Get data [GET]
+Grab all the information about the thing
+
++ Parameters
+    + id (required, number, '5') ... Unique 'id' of the thing
+
++ Response 200 (application/json)
+
+        
+            "id": 5,
+            "name": "Kevin"
+        }
+
+### New data [POST]
+Create a new thing
+
++ Parameters
+    + name (optional, string, 'Tyler') ... The 'name' of the thing
+
++ Request (application/json)
+
+        {
+            "name": "Tyler"
+        }
+
++ Response 201 (application/json)
+
+        {
+            "id": 7, 
+            "name": "Tyler"
+        }
